@@ -2,9 +2,9 @@ import React from 'react'
 
 const LoginCreate = () => {
   return (
-    <div>
+    <sextion classname = "animeLeft">
       Login create
-    </div>
+    </sextion>
   )
 }
 
