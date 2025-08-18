@@ -41,18 +41,18 @@ button, input{
 }
 
 a{
-  text-decoration: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 .container{
   max-width: 50rem;
-  padding: 0px 1rem;
+  padding: 0 1rem;
   margin: 0 auto; 
 }
 
 .mainContainer{
-  margin-top: 4rem;
-  
+  margin-top: 2rem;
 }
 
 .title{
@@ -61,6 +61,7 @@ a{
   line-height: 1;
   margin: 1rem 0;
   position: relative;
+  z-index: 1;
 }
 
 .title::after{
