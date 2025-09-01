@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { use } from 'react';
+import useFetch from '../../Hooks/useFetch';
 
 const Photo = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const { id } = useParams();
+  const { data, loading, error, request } = useFetch();
 
-export default Photo
+  React.useEffect(() => {
+    const{url, options} = PHOTO_GET(id);
+    request(url, options);
+  }, [id, request]);
+  
+
+  return <div>{id}</div>;
+};
+
+export default Photo;
