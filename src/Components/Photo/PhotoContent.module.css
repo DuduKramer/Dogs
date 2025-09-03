@@ -12,6 +12,11 @@
   animation: scaleUp 0.2s forwards;
 }
 
+.single.photo {
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
 @keyframes scaleUp {
   to {
     opacity: 1;
@@ -23,13 +28,21 @@
   padding: 2rem 2rem 0 2rem;
 }
 
+.single .details {
+  padding: 1rem 0px 0px 0px;
+}
+
 .img {
   grid-row: 1/4;
 }
 
-.comments {
-  padding: 0 2rem;
+.single .img{
+  grid-row: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
+
+
 
 @media (max-width: 64rem) {
   .photo {
@@ -56,15 +69,15 @@
 }
 
 .visualizacoes::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 16px;
   height: 10px;
   margin-right: 0.5rem;
-  background: url('../../Assets/visualizacao-black.svg');
+  background: url("../../Assets/visualizacao-black.svg");
 }
 
-.attributes{
+.attributes {
   display: flex;
   font-size: 1.125rem;
   font-weight: bold;
@@ -72,15 +85,15 @@
   margin-bottom: 2rem;
 }
 
-.attributes li{
+.attributes li {
   margin-right: 2rem;
 }
 
 .attributes li::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 20px;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   position: relative;
   top: 3px;
   width: 2px;
