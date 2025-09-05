@@ -1,7 +1,7 @@
-import React from 'react';
-import FeedModal from './FeedModal';
-import FeedPhotos from './FeedPhotos';
-import PropTypes from 'prop-types';
+import React from "react";
+import FeedModal from "./FeedModal";
+import FeedPhotos from "./FeedPhotos";
+import PropTypes from "prop-types";
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
@@ -24,11 +24,11 @@ const Feed = ({ user }) => {
       }
     }
 
-    window.addEventListener('wheel', infiniteScroll);
-    window.addEventListener('scroll', infiniteScroll);
+    window.addEventListener("wheel", infiniteScroll);
+    window.addEventListener("scroll", infiniteScroll);
     return () => {
-      window.removeEventListener('wheel', infiniteScroll);
-      window.removeEventListener('scroll', infiniteScroll);
+      window.removeEventListener("wheel", infiniteScroll);
+      window.removeEventListener("scroll", infiniteScroll);
     };
   }, [infinite]);
 
@@ -50,8 +50,16 @@ const Feed = ({ user }) => {
   );
 };
 
+Feed.defaultProps = {
+  user: 0,
+};
+
 Feed.propTypes = {
-  user: PropTypes.string.isRequired,
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
+  //
 };
 
 export default Feed;
