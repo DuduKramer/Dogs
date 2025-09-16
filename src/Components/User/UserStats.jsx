@@ -1,9 +1,10 @@
 import React from 'react'
+import Head from '../Helper/Head.jsx';
 
 const UserStats = () => {
   return (
     <div>
-      Estatistica
+       <Head title="Estatísticas"/>
     </div>
   )
 }
